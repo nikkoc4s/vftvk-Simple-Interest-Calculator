@@ -21,4 +21,18 @@ function sliderUpdate()
     var rate =  document.getElementById("rate").value;
     document.getElementById('slider_value').innerHTML = `${rate}%`;
 }
+
+function validate()
+{
+const principal_input = document.getElementById("principal");
+var principal = principal_input.value;
+if (Number(principal) <= 0 || principal == ""){
+    alert("Enter a positive number for amount");
+    principal_input.focus();
+    return false;
+}
+
+compute();
+return false;
+}
         
